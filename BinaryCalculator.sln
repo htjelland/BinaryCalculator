@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryCalculator", "BinaryCalculator\BinaryCalculator.csproj", "{3A80DFCB-7EC5-49EA-960F-3316222B4378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryCalculatorTests", "BinaryCalculatorTests\BinaryCalculatorTests.csproj", "{C1390A99-41F6-41A8-B7DF-22950D89A2B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A80DFCB-7EC5-49EA-960F-3316222B4378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A80DFCB-7EC5-49EA-960F-3316222B4378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A80DFCB-7EC5-49EA-960F-3316222B4378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A80DFCB-7EC5-49EA-960F-3316222B4378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1390A99-41F6-41A8-B7DF-22950D89A2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1390A99-41F6-41A8-B7DF-22950D89A2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1390A99-41F6-41A8-B7DF-22950D89A2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1390A99-41F6-41A8-B7DF-22950D89A2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C4BC662-9188-4907-8157-8B0AF87A5EB0}
+	EndGlobalSection
+EndGlobal

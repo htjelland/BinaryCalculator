@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="BinaryCalculator.Resources.IconDelete"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BinaryCalculator.Resources"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Collapsed" />
+        <Path Data="M18.768285,4.5710355C19.024167,4.5746605,19.278924,4.6759059,19.472429,4.8733961L22.092876,7.565488 24.713395,4.8733961C25.100416,4.4784152 25.73245,4.4684154 26.128471,4.854397 26.524492,5.2403785 26.532493,5.8723485 26.147472,6.2683298L23.488624,8.9993979 26.147596,11.731069C26.532606,12.126051 26.524606,12.75902 26.127595,13.145002 25.933591,13.333994 25.682584,13.427989 25.430578,13.427989 25.169572,13.427989 24.909566,13.325993 24.71356,13.125003L22.092874,10.433059 19.472116,13.125003C19.276105,13.325993 19.01509,13.427989 18.755077,13.427989 18.504064,13.427989 18.25205,13.333994 18.057041,13.145002 17.662019,12.75902 17.653018,12.126051 18.03804,11.731069L20.697126,8.9993579 18.038392,6.2683298C17.653383,5.8723485 17.661382,5.2403785 18.057393,4.854397 18.255399,4.6614062 18.512405,4.5674106 18.768285,4.5710355z M8.3240389,1.9999999L2.5840465,9.0009762 8.3129915,16 29.990001,16 29.990001,1.9999999z M7.3770169,0L31.990001,0 31.990001,18 7.3660306,18 0,8.9990231z"
+              Stretch="Uniform" Fill="Black" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <TransformGroup.Children>
+                        <RotateTransform Angle="0" />
+                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                    </TransformGroup.Children>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+    </Grid>
+</UserControl>
