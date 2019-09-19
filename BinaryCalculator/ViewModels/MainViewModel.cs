@@ -11,7 +11,7 @@ namespace BinaryCalculator.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        //Property for display of selected inputs and calculated results
+        //Property for display of inputs and calculated results
         private string _display;
         public string Display
         {
@@ -22,6 +22,9 @@ namespace BinaryCalculator.ViewModels
         private string _operand; //Latest input binary number (one or more digits 0 or 1)
         private string _operator; // Latest input operator + or -
         private int _result; //Calculated result (until now)
+        private ICalculator _calculator; //Unity injected dependency class
+        private CommandType _lastCommand; //Keep track of latest command executed
+
         public enum CommandType //List of possible button commands
         {
             Undefined = 0,
@@ -32,9 +35,6 @@ namespace BinaryCalculator.ViewModels
             ClearEntry = 5,
             Backspace = 6,
         }
-        private CommandType _lastCommand; //Keep track of latest command
-        private ICalculator _calculator; //Unity injected dependency class
-
         public DelegateCommand<string> NumericCommand { get; set; }
         public DelegateCommand<string> OperatorCommand { get; set; }
         public DelegateCommand ResultCommand { get; set; }
@@ -71,7 +71,7 @@ namespace BinaryCalculator.ViewModels
             _operand += input;
             Display = BinaryFormat(_operand);
 
-            //Store last command
+            //Store command
             _lastCommand = CommandType.Numeric;
         }
         
@@ -100,7 +100,7 @@ namespace BinaryCalculator.ViewModels
             //Reset
             _operand = string.Empty;
 
-            //Store last command
+            //Store command
             _lastCommand = CommandType.Operator;
         }
 
@@ -123,7 +123,7 @@ namespace BinaryCalculator.ViewModels
             //Display result
             Display = BinaryFormat(Convert.ToString(_result, 2));
 
-            //Store last command
+            //Store command
             _lastCommand = CommandType.Result;
         }
 
@@ -142,7 +142,7 @@ namespace BinaryCalculator.ViewModels
             //Clear display
             Display = string.Empty;
 
-            //Store last command
+            //Store command
             _lastCommand = CommandType.Clear;
         }
 
@@ -154,7 +154,7 @@ namespace BinaryCalculator.ViewModels
             //Clear display
             Display = string.Empty;
 
-            //Store last command
+            //Store command
             _lastCommand = CommandType.ClearEntry;
         }
 
@@ -169,18 +169,18 @@ namespace BinaryCalculator.ViewModels
                     Display = BinaryFormat(_operand);
                 }
 
-                //Store last command
+                //Store command
                 _lastCommand = CommandType.Backspace;
             }
         }
 
-        //Format binary strings to groups by 4 digits separated by space
+        //Format binary string to groups of up to 4 digits separated by space
         private string BinaryFormat(string source)
         {
             return Regex.Replace(source, "[01]{4}", "$0 ");
         }
 
-        //Convert unformatted binary string to integer
+        //Convert binary string to integer
         private int BinaryStringToInt(string source)
         {
             int value;
