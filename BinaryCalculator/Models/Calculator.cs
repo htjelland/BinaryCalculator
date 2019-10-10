@@ -29,8 +29,8 @@ namespace BinaryCalculator.Models
 
         //public double Calculate(string expression)
         //{
-        //    var dataTable = new DataTable();
-        //    var result = dataTable.Compute(expression, string.Empty);
+        //    var dt = new DataTable();
+        //    var result = dt.Compute(expression, string.Empty);
         //    return Convert.ToDouble(result);
         //}
 
